@@ -17,7 +17,9 @@
     "styleguide:build": "styleguidist build && node scripts/moveBuildAssets.js",
     "test:watch": "npm test -- --watch --bail",
     "test": "jest --silent && npm run test:lint",
-    "test:generate-coverage-report": "codecov"
+    "test:generate-coverage-report": "codecov",
+    "merge:em": "uxpin-merge --webpack-config ./webpack.uxpin.config.js",
+    "merge:dump": "uxpin-merge --webpack-config ./webpack.uxpin.config.js dump"
   },
   "repository": {
     "type": "git",
@@ -40,6 +42,7 @@
   "devDependencies": {
     "@instacart/eslint-config": "0.1.9",
     "@instacart/prettier-config": "0.1.1",
+    "@uxpin/merge-cli": "^1.4.2",
     "babel-core": "^6.26.0",
     "babel-jest": "^22.4.1",
     "babel-loader": "^7.1.4",
